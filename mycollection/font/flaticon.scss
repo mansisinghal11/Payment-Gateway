@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?5c7307df22263646e384ed2cd1545b6f") format("truetype"),
+url("./flaticon.woff?5c7307df22263646e384ed2cd1545b6f") format("woff"),
+url("./flaticon.woff2?5c7307df22263646e384ed2cd1545b6f") format("woff2"),
+url("./flaticon.eot?5c7307df22263646e384ed2cd1545b6f#iefix") format("embedded-opentype"),
+url("./flaticon.svg?5c7307df22263646e384ed2cd1545b6f#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "meat": "\f101",
+    "medicine": "\f102",
+    "open-magazine": "\f103",
+);
+
+.flaticon-meat:before {
+    content: map-get($flaticon-map, "meat");
+}
+.flaticon-medicine:before {
+    content: map-get($flaticon-map, "medicine");
+}
+.flaticon-open-magazine:before {
+    content: map-get($flaticon-map, "open-magazine");
+}
